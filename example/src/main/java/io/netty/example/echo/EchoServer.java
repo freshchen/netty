@@ -29,10 +29,12 @@ import io.netty.handler.logging.LoggingHandler;
 import io.netty.handler.ssl.SslContext;
 import io.netty.handler.ssl.SslContextBuilder;
 import io.netty.handler.ssl.util.SelfSignedCertificate;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Echoes back any received data from a client.
  */
+@Slf4j
 public final class EchoServer {
 
     static final boolean SSL = System.getProperty("ssl") != null;
